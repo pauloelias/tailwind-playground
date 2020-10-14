@@ -1,0 +1,26 @@
+{
+  "name": "beginner-tailwind",
+  "version": "1.0.0",
+  "private": false,
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn run clean && yarn run build:css",
+    "build:css": "postcss src/**/*.css --base src --dir build",
+    "clean": "rimraf build",
+    "start": "yarn run clean && yarn run watch",
+    "watch": "concurrently --raw --kill-others \"yarn run watch:files\" \"yarn run watch:css\"",
+    "watch:files": "live-server --watch=src --port=3000 --no-browser --no-css-inject",
+    "watch:css": "postcss src/**/*.css --base src --dir build --watch"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "live-server": "^1.2.1",
+    "postcss": "^8.1.1",
+    "postcss-cli": "^8.1.0",
+    "postcss-import": "^12.0.1",
+    "postcss-preset-env": "^6.7.0",
+    "rimraf": "^3.0.2",
+    "stylelint-config-recommended": "^3.0.0",
+    "tailwindcss": "^1.9.1"
+  }
+}
