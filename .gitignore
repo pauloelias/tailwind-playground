@@ -1,6 +1,31 @@
-.cache
-/build
-/dist
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
 /node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# Builds
+/build
+
+# Caches
+.cache
+
+# npm/yarn
+yarn.lock
 package-lock.json
-yarn-error.log
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+*.log*
+
+# vercel
+.vercel
+
+
